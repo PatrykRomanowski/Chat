@@ -1,0 +1,23 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+   list-style: none;
+   display: flex;
+   flex-direction: column;
+   width: 100vw;
+  
+}
+
+li {
+    font-size: 12px;
+    width: 100% - 10px;
+    height: 30px;
+    margin: 5px;
+    text-align: center;
+    border-style: groove;
+    position: relative;
+}

@@ -7,12 +7,12 @@ const fetchMovies = async () => {
     const json = await response.json()
     console.log(json)
 
-    return json
+    return Object.entries(json)
 }
 
 export const getAllMovies = () => 
     async (dispatch) => {
         const movies = await fetchMovies()
         // console.log(movies)
-        movies.map(movie => dispatch(actions.add(movie)))
+        movies.map(movie => dispatch(actions.add(movie[1])))
     }

@@ -2,6 +2,9 @@ import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
 import { getAllMovies } from '../app/movies/duck/operation';
 
+import './componentCss/movieComponent.css'
+
+
 
 const MovieComponent = ({movies, getAllMovies}) => {
 

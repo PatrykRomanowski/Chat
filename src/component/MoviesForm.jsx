@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import actions from '../app/movies/duck/actions';
 import axios from 'axios'
 import {URL} from '../consts/firebase'
 
 const FormComponent = (props) => {
+
+    const [counter, setCounter] = useState(0);
+
+
 
     const movieInput = React.createRef()
 
@@ -17,8 +21,9 @@ axios.get(URL)
    .then(response => console.log(response.data))
    .catch(response => console.log(response))
 
-axios.put(URL, {
-    1: movieInput.current.value
+axios.post(URL , {
+    0: movieInput.current.value,
+ 
 })
     }
 
