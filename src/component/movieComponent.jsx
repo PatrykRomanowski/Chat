@@ -11,9 +11,11 @@ const MovieComponent = ({movies, getAllMovies}) => {
 useEffect(() => { 
     getAllMovies() }, [])
 
-    return <ul>
+    return <div className='contener'>
+         <ul>
            {movies.list.map(movie => <li>{movie}</li>)}
         </ul>
+        </div>
 }
 
 const mapStateToProps = (state) => ({
